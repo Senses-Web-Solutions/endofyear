@@ -28,11 +28,8 @@ class ContactController extends Controller
             'message' => ['required', 'string', 'max:255'],
         ]);
 
-
-        User::find(1)->notify(new ContactMessageReceived($request->email, $request->name, $request->message));
-
-        Notification::route('mail', $request->email)
-        ->notify(new ContactMessageThanks($request->name));
+        Notification::route('mail', 'matt@senses.co.uk')->notify(new ContactMessageReceived($request->email, $request->name, $request->message));
+        Notification::route('mail', $request->email)->notify(new ContactMessageThanks($request->name));
 
         return Redirect::to('/contact')->with('success', 'Thank you for your message. We will get back to you as soon as possible.');
     }

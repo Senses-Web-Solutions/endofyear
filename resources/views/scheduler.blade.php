@@ -40,7 +40,7 @@
 
 
 <body class="h-full" style="background-image: linear-gradient(rgb(237, 242, 247) 0%, rgba(237, 242, 247, 0) 100%);">
-    <image src="/assets/images/scheduler.png" class="w-full h-full object-cover">
+    <image src="{{asset("/storage/images/scheduler.png")}}" class="w-full h-full object-cover">
 </body>
 
 </html>
