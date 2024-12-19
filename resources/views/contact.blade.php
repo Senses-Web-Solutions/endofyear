@@ -23,8 +23,9 @@
                         <h2
                             class="text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
                             Contact Teamleaf</h2>
-                        <p class="mt-2 text-lg/8 text-gray-600">Aute magna irure deserunt veniam aliqua magna
-                            enim voluptate.</p>
+                        <p class="mt-2 text-lg/8 text-gray-600">
+                            We're here to help you with any questions or concerns you may have.
+                        </p>
                     </div>
 
 
