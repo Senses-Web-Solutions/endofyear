@@ -22,7 +22,7 @@ class ContactController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $request->validateWithBag('userDeletion', [
+        $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'email'],
             'message' => ['required', 'string', 'max:255'],
@@ -34,6 +34,6 @@ class ContactController extends Controller
         Notification::route('mail', $request->email)
         ->notify(new ContactMessageThanks($request->name));
 
-        return Redirect::to('/contact');
+        return Redirect::to('/contact')->with('success', 'Thank you for your message. We will get back to you as soon as possible.');
     }
 }

@@ -16,6 +16,14 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+Route::get('/scheduler', function () {
+    return view('scheduler');
+})->name('scheduler');
+
+Route::get('/map-scheduler', function () {
+    return view('map-scheduler');
+})->name('map-scheduler');
+
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 Route::middleware('auth')->group(function () {
