@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="relative w-full h-full mt-16">
-    <image src="{{asset("/storage/images/scheduler.png")}}" class="w-full h-full object-cover">
+    <image src="{{asset("/images/scheduler.png")}}" class="w-full h-full object-cover">
 
     <div class="bar absolute h-10 w-48 top-16 left-4 bg-white border rounded-md z-[100]">
         <div class="flex items-center gap-2">
