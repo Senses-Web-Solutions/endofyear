@@ -33,9 +33,7 @@
         }
     </style>
 
-    @vite('resources/css/app.css')
-
-    <script src="https://unpkg.com/@rive-app/canvas@2.9.1"></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 

@@ -1,46 +1,25 @@
-<!DOCTYPE html>
-<html class="h-full bg-white" lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Teamleaf Website</title>
+@section('content')
 
-    <script src="//unpkg.com/alpinejs" defer=""></script>
-
-    <link href="/production/assets/css/app.css" rel="stylesheet">
-    <script type="text/javascript" src="/production/assets/js/app2.js"></script>
-
-    <style>
-        /* width */
-        ::-webkit-scrollbar {
-            width: 5px;
-        }
-
-        /* Track */
-        ::-webkit-scrollbar-track {
-            background: #18181b;
-        }
-
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-            background: #71717a;
-        }
-
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-            background: #71717a;
-        }
-    </style>
-
-    @vite('resources/css/app.css')
-
-    <script src="https://unpkg.com/@rive-app/canvas@2.9.1"></script>
-</head>
-
-
-<body class="h-full" style="background-image: linear-gradient(rgb(237, 242, 247) 0%, rgba(237, 242, 247, 0) 100%);">
+<div class="relative w-full h-full mt-16">
     <image src="{{asset("/storage/images/scheduler.png")}}" class="w-full h-full object-cover">
-</body>
 
-</html>
+    <div class="bar absolute h-10 w-48 top-16 left-4 bg-white border rounded-md z-[100]">
+        <div class="flex items-center gap-2">
+            <div class="p-2 text-gray-500 border-r">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-grip"><circle cx="12" cy="5" r="1"/><circle cx="19" cy="5" r="1"/><circle cx="5" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/><circle cx="12" cy="19" r="1"/><circle cx="19" cy="19" r="1"/><circle cx="5" cy="19" r="1"/></svg>
+            </div>
+
+            <div class="text-gray-700 text-sm">
+                <p>Task 42548356</p>
+            </div>
+        </div>
+    </div>
+
+    <svg class="bar motion-path-demo">
+        <path d="M 68 667 C 381 283 800 200 1284 213" />
+    </svg>
+</div>
+
+@endsection
